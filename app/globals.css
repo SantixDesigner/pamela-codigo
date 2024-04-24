@@ -2,32 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+.header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  height: 50px;
+  .bars{
+    position: absolute;
+    
+    right: 5px;
+    top: 5px;
+    display: none;
+    @media(max-width:850px){
+      display: block;
+    }
+  }
+  .nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0 15px;
+        a {
+          font-size: 16px;
+          @media(max-width:960px){
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    @media(max-width:850px){
+      ul{
+        transition: 0.8s;
+        transform: translateX(-232px);
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 24px;
+        background-color: black;
+        color: white;
+        height: 100vh;
+        z-index: 2;
+        align-items: center;
+      }
+    }
+  }
+  .nav-abierto{
+    ul{
+      transform: translateX(-20px);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    }
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*.whatsapp {
+  svg {
+    font-size: 40px;
+    background-color: rgb(0, 197, 0);
+    color: white;
+    padding: 15px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 35px;
+    left: 35px;
+  }
+}
+*/
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.first-container {
+  margin-top: 30px;
+  /*background-color: rgba(128,128,128,0.2);*/
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media(max-width:850px){
+    flex-direction: column;
   }
+}
+
+.context-info {
+  h2{
+    &:first-of-type{
+      margin-bottom: 55px;
+    }
+  }
+  margin-right: 40px;
+  text-align: center;
+  font-size: 38px;
+  h5{
+    margin-top: 55px;
+  }
+  @media(max-width:850px){
+    margin-right: 0;
+    h5{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.context-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
 }

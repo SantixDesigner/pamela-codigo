@@ -7,32 +7,39 @@
   color: white;
   padding: 1rem;
   height: 50px;
-  .bars{
+
+  .bars {
     position: absolute;
-    
+
     right: 5px;
     top: 5px;
     display: none;
-    @media(max-width:850px){
+
+    @media(max-width:850px) {
       display: block;
     }
   }
+
   .nav {
     ul {
       display: flex;
       justify-content: center;
+
       li {
         margin: 0 15px;
+
         a {
           font-size: 16px;
-          @media(max-width:960px){
+
+          @media(max-width:960px) {
             font-size: 14px;
           }
         }
       }
     }
-    @media(max-width:850px){
-      ul{
+
+    @media(max-width:850px) {
+      ul {
         transition: 0.8s;
         transform: translateX(-232px);
         position: absolute;
@@ -47,8 +54,9 @@
       }
     }
   }
-  .nav-abierto{
-    ul{
+
+  .nav-abierto {
+    ul {
       transform: translateX(-20px);
 
     }
@@ -69,7 +77,7 @@
 }
 */
 
-.main {
+.main .presentacion {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,26 +91,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media(max-width:850px){
-    flex-direction: column;
+
+  @media(max-width:850px) {
+    flex-direction: column-reverse;
   }
 }
 
 .context-info {
-  h2{
-    &:first-of-type{
+  h2 {
+    &:first-of-type {
       margin-bottom: 55px;
     }
   }
+
   margin-right: 40px;
   text-align: center;
   font-size: 38px;
-  h5{
+
+  h5 {
     margin-top: 55px;
   }
-  @media(max-width:850px){
+
+  @media(max-width:850px) {
     margin-right: 0;
-    h5{
+
+    h5 {
       margin-bottom: 20px;
     }
   }
@@ -113,4 +126,147 @@
   height: 400px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.formacion-academica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .formacion-psiquiatria {
+    font-size: 20px;
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  .formacion-medica {
+    font-size: 20px;
+
+    h4 {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    ul{
+      li{
+        font-size: 25px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+.cursos {
+  width: 80%;
+  max-width: 800px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  margin: 10px auto;
+  max-height: 30px;
+  padding-left: 5px;
+  overflow-y: hidden;
+  transition: max-height 0.3s;
+}
+
+.cursos-abiertos{
+  max-height: 1300px;
+}
+
+.formaciones-especificas{
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 800px;
+  .cursos{
+    width: 300px;
+    div{
+      ul{
+        li{
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.tratamientos-especificos{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.tratamientos-especificos .tratamiento{
+  width: 90%;
+  max-width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  margin: 10px auto;
+  max-height: 30px;
+  overflow-y: hidden;
+  padding-left: 5px;
+  transition: max-height 0.3s;
+  ul{
+    li{
+      margin: 5px 0;
+    }
+  }
+}
+.first-man{
+  display: inline;
+  transition: .2s;
+}
+.check{
+  transform: rotate(180deg);
+}
+.seccion-de-contacto{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.contacto-whatsapp div{
+  display: flex;
+  background-color: rgb(0, 172, 0);
+  border-radius: 15px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 34px;
+  color: white;
+}
+.contacto-whatsapp div a{
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  margin: 0;
+}
+.contacto-whatsapp div svg{
+  font-size: 38px;
+  margin-left: 15px;
+}
+
+.mapa{
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  h2{
+    font-size: 35px;
+  }
+  iframe{
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+  }
+}
+body{
+  overflow-x: hidden;
 }

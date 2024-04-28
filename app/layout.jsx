@@ -1,6 +1,9 @@
-import { Inter } from "next/font/google";
+import { Ubuntu } from "next/font/google";
+import { League_Spartan } from "next/font/google";
+import { Quicksand } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Ubuntu({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "Create Next App",

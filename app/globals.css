@@ -2,21 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .header {
-  background-color: black;
-  color: white;
   padding: 1rem;
   height: 50px;
-
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
   @media(max-width:850px) {
     height: 75px;
   }
-
   .bars {
     position: absolute;
 
@@ -44,22 +42,33 @@ body {
 
       li {
         margin: 0 25px;
+        .contacto-a{
+          background-color: #6793B7;
+          color: rgb(255, 255, 255);
+          padding: 8px;
+          border-radius: 25px;
 
+          &:hover::before {
+            width: 0;
+          }
+        }
         a {
           font-size: 18px;
           position: relative;
           text-decoration: none;
-          color: whitesmoke;
+          color: #6793B7;
+          font-weight: 600;
 
           &::before {
             content: "";
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
             left: 50%;
+            border-radius: 2px;
             transform: translateX(-50%);
             width: 0;
-            height: 2px;
-            background-color: #ffffff;
+            height: 3px;
+            background-color: #6793B7;
             transition: width 0.3s ease;
           }
 
@@ -79,7 +88,7 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         font-size: 24px;
-        background-color: rgb(0, 0, 0);
+        background-color: white;
         width: 100%;
         left: 0;
         z-index: 2;
@@ -113,15 +122,17 @@ body {
 
 .main .presentacion {
   display: flex;
-  background-color: #7392B7;
+  background-color: #DDF0FF;
   justify-content: center;
   align-items: center;
+  background-image: url('../public/images/fondo.png');
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-position: -400px 90px;
 }
 
 .first-container {
-  margin-top: 30px;
-  /*background-color: rgba(128,128,128,0.2);*/
-  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -140,9 +151,12 @@ body {
 
   h2 {
     &:first-of-type {
-      font-size: 90px;
-      color: rgb(0, 0, 0);
-      font-weight: bold;
+      font-family: "League Spartan", sans-serif;
+      font-size: 100px;
+      font-optical-sizing: none;
+      font-weight: 700;
+      color: #6793B7;
+      letter-spacing: -5px;
 
       @media(max-width:1400px) {
         font-size: 70px;
@@ -158,25 +172,31 @@ body {
   text-align: center;
   font-size: 28px;
 
-  h2 {
-    margin: 5px 0;
+  h2,h5 {
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin: 30px 0;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    margin: 30px 0;
   }
-
-  h5 {
-    margin-bottom: 30px;
+  @media(max-width:1280px) {
+    h2,h5{
+      font-weight: 500;
+    }
   }
-
   .contacto-perso {
     margin-top: 40px;
     z-index: 0;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 44px;
     text-align: center;
     padding: 10px 70px;
+    letter-spacing: -3px;
     color: white;
     border-radius: 40px;
     border: 2px solid white;
-    background-color: rgb(0, 0, 0);
+    background-color: #6793B7;
     ;
   }
 
@@ -190,57 +210,68 @@ body {
 }
 
 .context-image img {
-  width: 500px;
   object-fit: cover;
-  @media(max-width:850px){
-    width: 300px;
-    height: 300px;
+  width: 500px;
+  height: 500px;
+
+  @media(max-width:850px) {
+    width: 500px;
+    height: 500px;
   }
 }
-.title-sep-a{
+
+.title-sep-a {
   padding-bottom: 30px;
   padding-top: 30px;
-  background: linear-gradient(#7392B7, #7392B7);
 }
-.title-sep-b{
+
+.title-sep-b {
   padding-bottom: 30px;
   padding-top: 30px;
-  background: linear-gradient(rgb(225,227,229), rgb(225,227,229));
   padding: 50px;
 }
+
 .formacion-academica {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(#7392B7, rgb(133, 168, 190));
 
   .formacion-psiquiatria {
     font-size: 22px;
 
     h2 {
-      -webkit-text-fill-color: black;
-      -webkit-text-stroke: .9px white;
-      font-size: 36px;
-      font-weight: bold;
-      font-style: italic;
+      font-family: 'League Spartan',sans-serif;
+      color: #6793B7;
+      font-size: 40px;
+      letter-spacing: -2px;
+      font-weight: 800;
     }
-
-    margin-bottom: 20px;
+    ul{
+      li{
+        font-family: 'Quicksand',sans-serif;
+        list-style:inside;
+      }
+    }
+    margin-bottom: 50px;
   }
 
   .formacion-medica {
     h4 {
-      font-size: 36px;
-      font-style: italic;
-      -webkit-text-fill-color: black;
-      -webkit-text-stroke: .9px white;
-      font-weight: bold;
+        font-family: 'League Spartan',sans-serif;
+        color: #6793B7;
+        font-size: 40px;
+        letter-spacing: -2px;
+        font-weight: 800;
     }
 
     ul {
+
       li {
+        font-family: 'Quicksand',sans-serif;
         font-size: 22px;
+        margin-bottom: 15px;
+        list-style:inside;
       }
     }
   }
@@ -282,75 +313,69 @@ body {
   .sep::before {
     left: -300px;
   }
-  .sep::after{
+
+  .sep::after {
     right: -300px;
   }
 }
-@media(max-width:400px){
-  .sep::before{
-    left:-250px;
+
+@media(max-width:400px) {
+  .sep::before {
+    left: -250px;
   }
-  .sep::after{
+
+  .sep::after {
     right: -250px;
   }
 }
-@media(max-width:350px){
-  .sep::before{
-    left:-225px;
+
+@media(max-width:350px) {
+  .sep::before {
+    left: -225px;
   }
-  .sep::after{
+
+  .sep::after {
     right: -225px;
   }
 }
+
 .title-sep {
   padding: 50px;
-  background: linear-gradient(rgb(163, 188, 204), rgb(214, 221, 226));
 }
 
 .cursos {
   width: 80%;
   max-width: 800px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  margin: 10px auto;
-  max-height: 30px;
+  border-radius: 20px;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #6793B7;
+  font-weight: 600;
+  margin: 30px auto;
+  max-height: 40px;
   cursor: pointer;
   padding-left: 5px;
   overflow-y: hidden;
   transition: max-height 0.3s;
 }
-
-.derecha {
-  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
-
-  @media(max-width:600px) {
-    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0, 0, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -20px 20px, rgba(0, 0, 0, 0.05) -25px 25px;
-  }
-}
-
-.izquierda {
-  box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0, 0, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -20px 20px, rgba(0, 0, 0, 0.05) -25px 25px;
-}
-
 .cursos-abiertos {
-  max-height: 1300px;
-}
-
-.formaciones-especificas-color {
-  background: linear-gradient(rgb(133, 168, 190), rgb(163, 188, 204));
+  max-height: 2500px;
 }
 
 .formaciones-especificas {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  flex-wrap: wrap;
   max-width: 800px;
-
   .cursos {
     width: 300px;
-
     div {
       ul {
         li {
+          color: black;
+          list-style:inside;
           margin: 10px 0 0 0;
         }
       }
@@ -358,25 +383,31 @@ body {
   }
 }
 
-
-
-.tratamientos-especificos-color {
-  background: linear-gradient(rgb(214, 221, 226), rgb(225,227,229) );
-
-
+.tratamientos-especificos-color{
+  background-color: #DDF0FF;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  h2{
+      font-size: 60px;
+      color: #6793B7;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 50px;
+      font-family: 'League Spartan',sans-serif;
+      letter-spacing: -2px;
+  }
 }
-
 .tratamientos-especificos {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 800px;
+
 }
 
 .tratamientos-especificos .tratamiento {
   width: 90%;
   max-width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 10px auto;
   max-height: 30px;
   overflow-y: hidden;
@@ -385,14 +416,16 @@ body {
 
   ul {
     li {
-      margin: 5px 0;
+      color: black;
+      list-style:inside;
+      margin: 10px 0 0 0;
     }
   }
 }
 
 .first-man {
   display: inline;
-  transition: .2s;
+  transition: .2s
 }
 
 .check {
@@ -401,20 +434,33 @@ body {
 
 .seccion-de-contacto {
   display: flex;
-  background: linear-gradient(rgb(225,227,229), rgb(255,255,255) );
+  padding: 10px 0 50px 0;
+  background-image: url('../public/images/fondo.png');
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-position: -460px -100px;
+  background-color: #DDF0FF;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
+  h2{
+    text-align: center;
+    font-size: 60px;
+    color: #6793B7;
+    letter-spacing: -3px;
+    margin: 30px 0;
+    font-family: 'League Spartan',sans-serif;
+    font-weight: 800;
+  }
 }
 
 .contacto-whatsapp div {
   display: flex;
-  background-color: rgb(0, 172, 0);
-  border-radius: 15px;
+  background-color:#6793B7;
+  border-radius: 70px;
+  position: relative;
   justify-content: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 400px;
   font-size: 34px;
   color: white;
 }
@@ -422,27 +468,82 @@ body {
 .contacto-whatsapp div a {
   width: 100%;
   text-align: center;
-  padding: 25px;
-  margin: 0;
+  width: 100%;
+  font-weight: bolder;
+  padding: 5px;
+  margin-right: 35px;
 }
 
 .contacto-whatsapp div svg {
-  font-size: 38px;
-  margin-left: 15px;
+  font-size: 60px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  margin: auto 0;
 }
 
 .mapa {
-  max-width: 900px;
   width: 100%;
   text-align: center;
 
-  h2 {
-    font-size: 35px;
-  }
-
   iframe {
+    max-width: 842px;
     margin: 0 auto;
     width: 90%;
-    height: 500px;
+    height: 400px;
+  }
+}
+.linkedin{
+  margin-top: 20px;
+}
+.formaciones-grid{
+  padding-top: 100px;
+  background-position: 900px -50px;
+  background-repeat: no-repeat;
+  background-color: #DDF0FF;
+  display: grid;
+  background-image: url('../public/images/fondo-reversa.png');
+  grid-template-columns: 1fr 1fr;
+  @media(max-width:850px){
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapa{
+  width: 100%;
+  color: #6793B7;
+  background-color: #DDF0FF;
+  background-image: url('../public/images/fondo-reversa.png');
+  background-position: 900px -50px;
+  background-repeat: no-repeat;
+  padding: 10px;
+  margin: 0 auto;
+  p{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  h2{
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    font-family: 'League Spartan',sans-serif;
+  }
+  iframe{
+    border: 5px solid white;
+    border-radius: 10px;
+  }
+}
+
+.footer{
+  text-align: center;
+  color: #6793B7;
+  padding: 10px;
+  h2{
+    position: relative;
+    padding-bottom: 4px;
+    text-decoration: underline;
+    color: #6793B7;
+    font-weight: 600;
   }
 }

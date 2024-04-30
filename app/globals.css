@@ -100,7 +100,7 @@
 
   .nav-abierto {
     ul {
-      height: 160px;
+      height: 200px;
 
     }
   }
@@ -239,7 +239,6 @@
 
   .formacion-psiquiatria {
     font-size: 22px;
-
     h2 {
       font-family: 'League Spartan',sans-serif;
       color: #6793B7;
@@ -248,9 +247,12 @@
       font-weight: 800;
     }
     ul{
+      width: 100%;
+      max-width: 455px;
       li{
         font-family: 'Quicksand',sans-serif;
         list-style:inside;
+        list-style-position: outside;
       }
     }
     margin-bottom: 50px;
@@ -366,7 +368,7 @@
 
 .formaciones-especificas {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: 800px;
   .cursos {
@@ -387,6 +389,11 @@
   background-color: #DDF0FF;
   padding-top: 30px;
   padding-bottom: 20px;
+  background-image: url('../public/images/fondo.png');
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-position: -500px -100px;
+
   h2{
       font-size: 60px;
       color: #6793B7;
@@ -395,6 +402,9 @@
       margin-bottom: 50px;
       font-family: 'League Spartan',sans-serif;
       letter-spacing: -2px;
+      @media(max-width:430px){
+        font-size: 50px;
+      }
   }
 }
 .tratamientos-especificos {
@@ -403,6 +413,12 @@
   margin: 0 auto;
   max-width: 800px;
 
+}
+.reversa{
+  background-image: url('../public/images/fondo-reversa.png');
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-position: 1100px -50px;
 }
 
 .tratamientos-especificos .tratamiento {
@@ -503,10 +519,7 @@
   background-color: #DDF0FF;
   display: grid;
   background-image: url('../public/images/fondo-reversa.png');
-  grid-template-columns: 1fr 1fr;
-  @media(max-width:850px){
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr
 }
 
 .mapa{

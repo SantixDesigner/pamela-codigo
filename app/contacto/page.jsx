@@ -29,10 +29,10 @@ const Page = () => {
                             <Link href='/tratamiento'>Tratamientos</Link>
                         </li>
                         <li>
-                            <Link href="/contacto" className="contacto-a" >Contacto</Link>
+                            <Link href="/servicio" >Servicios</Link>
                         </li>
                         <li>
-                            <Link href="/servicio" >Servicios</Link>
+                            <Link href="/contacto" className="contacto-a" >Contacto</Link>
                         </li>
                     </ul>
                 </nav>

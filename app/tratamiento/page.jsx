@@ -34,11 +34,12 @@ const Page = () => {
                         <li>
                             <Link href='/tratamiento' className="contacto-a">Tratamientos</Link>
                         </li>
-                        <li>
-                            <Link href="/contacto" >Contacto</Link>
-                        </li>
+
                         <li>
                             <Link href="/servicio" >Servicios</Link>
+                        </li>
+                        <li>
+                            <Link href="/contacto" >Contacto</Link>
                         </li>
                     </ul>
                 </nav>

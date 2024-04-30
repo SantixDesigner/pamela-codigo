@@ -34,11 +34,12 @@ const Page = () => {
                         <li>
                             <Link href='/tratamiento'>Tratamientos</Link>
                         </li>
-                        <li>
-                            <Link href="/contacto" >Contacto</Link>
-                        </li>
+
                         <li>
                             <Link href="/servicio" className="contacto-a">Servicios</Link>
+                        </li>
+                        <li>
+                            <Link href="/contacto" >Contacto</Link>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +48,7 @@ const Page = () => {
                 }} />
             </header>
             <main className="main" style={{ overflowX: "hidden" }}>
-                <section className="tratamientos-especificos-color" id="tratamiento">
+                <section className="tratamientos-especificos-color reversa" id="tratamiento">
                     <h2>Servicios</h2>
                     <section className="tratamientos-especificos">
                         <div className="cursos tratamiento tratamiento-psiquiatria derecha" style={{ maxHeight: aberturaDeTratamientoPsiquiatrico ? '300px' : '45px' }} onClick={() => setAberturaDeTratamientoPsiquiatrico(!aberturaDeTratamientoPsiquiatrico)}>

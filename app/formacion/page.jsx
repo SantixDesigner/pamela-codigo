@@ -35,10 +35,10 @@ const Page = () => {
               <Link href="/tratamiento">Tratamientos</Link>
             </li>
             <li>
-              <Link href="/contacto">Contacto</Link>
+              <Link href="/servicio" >Servicios</Link>
             </li>
             <li>
-              <Link href="/servicio" >Servicios</Link>
+              <Link href="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
@@ -51,7 +51,7 @@ const Page = () => {
           <section>
             <article className="formacion-academica" >
               <div className="formacion-psiquiatria">
-                <h2>Formación Académica</h2>
+                <h2>Formación Académica:</h2>
                 <ul>
                   <li className="mb-5">Médica (U.A.I)</li>
                   <li className="mb-5 mt-5"> Especialización en Psiquiatría. (U.C.A).</li>
@@ -106,7 +106,7 @@ const Page = () => {
                   <h4>Formación Holística <SlArrowUp className={aberturaDeHolisticaCursos ? 'first-man' : 'first-man check'} /></h4>
                   <ul>
                     <li>Coach Ontológico Profesional.  (A.C.T.P – M.C.C).</li>
-                    <li>Practitioner en P.N.L. (Society of P.N.L).</li>
+                    <li>Practitioner en Programación Neurolingüística (Society of P.N.L).</li>
                     <li>Mindfulness en Tiempos de Estrés. (U.C.A).</li>
                     <li>Curso de Biodescodificación (Capacitarte).</li>
 

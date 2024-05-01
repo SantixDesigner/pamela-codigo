@@ -41,6 +41,9 @@ const Page = () => {
                         <li>
                             <Link href="/contacto" >Contacto</Link>
                         </li>
+                        <li>
+                            <Link href="/ubicacion">Ubicación</Link>
+                        </li>
                     </ul>
                 </nav>
                 <FontAwesomeIcon icon={abierto ? faX : faBars} className={abierto ? 'xBars fa-2x' : 'bars fa-2x'} onClick={() => {
@@ -48,20 +51,25 @@ const Page = () => {
                 }} />
             </header>
             <main className="main" style={{ overflowX: "hidden" }}>
-                <section className="tratamientos-especificos-color reversa" id="tratamiento">
+                <section className=" tratamientos-especificos-color reversa" id="tratamiento">
                     <h2>Servicios</h2>
-                    <section className="tratamientos-especificos">
-                        <div className="cursos tratamiento tratamiento-psiquiatria derecha" style={{ maxHeight: aberturaDeTratamientoPsiquiatrico ? '300px' : '45px' }} onClick={() => setAberturaDeTratamientoPsiquiatrico(!aberturaDeTratamientoPsiquiatrico)}>
-                            <h4>Servicio de Coaching y PNL <SlArrowUp className={aberturaDeTratamientoPsiquiatrico ? 'first-man' : 'first-man check'} /></h4>
-                            <ul>
-                                <li>Gestión de estados emocionales.</li>
-                                <li>Pedagogia ontológica</li>
-                                <li>Desarrollo y liderazgo Personal</li>
-                                <li>Procesos de coaching ejecutivo</li>
-                                <li>Potenciación en áreas de Project Management</li>
-                                <li>Construcción de equipos de alto desempeño</li>
-                            </ul>
-                        </div>
+                    <section className="grid-servicio">
+                        <section className="imagen_servicio">
+                            <img src="./images/pamela-servicio.png" alt="Pamela" />
+                        </section>
+                        <section className="tratamientos-especificos servicio-especifico coaching">
+                            <div className="cursos tratamiento tratamiento-psiquiatria derecha" style={{ maxHeight: aberturaDeTratamientoPsiquiatrico ? '340px' : '45px' }} onClick={() => setAberturaDeTratamientoPsiquiatrico(!aberturaDeTratamientoPsiquiatrico)}>
+                                <h4>Coaching y PNL <SlArrowUp className={aberturaDeTratamientoPsiquiatrico ? 'first-man' : 'first-man check'} /></h4>
+                                <ul>
+                                    <li>Gestión de estados emocionales.</li>
+                                    <li>Pedagogia ontológica</li>
+                                    <li>Desarrollo y liderazgo Personal</li>
+                                    <li>Procesos de coaching ejecutivo</li>
+                                    <li>Potenciación en áreas de Project Management</li>
+                                    <li>Construcción de equipos de alto desempeño</li>
+                                </ul>
+                            </div>
+                        </section>
                     </section>
                 </section>
             </main>

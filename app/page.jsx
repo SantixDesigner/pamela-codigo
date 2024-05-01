@@ -45,6 +45,9 @@ export default function Home() {
             <li>
               <Link href="/contacto" >Contacto</Link>
             </li>
+            <li>
+              <Link href="/ubicacion">Ubicación</Link>
+            </li>
           </ul>
         </nav>
         <FontAwesomeIcon icon={abierto ? faX : faBars} className={abierto ? 'xBars fa-2x' : 'bars fa-2x'} onClick={() => {

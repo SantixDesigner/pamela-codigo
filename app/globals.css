@@ -12,9 +12,11 @@
   top: 0;
   background-color: white;
   z-index: 2;
+
   @media(max-width:850px) {
     height: 75px;
   }
+
   .bars {
     position: absolute;
 
@@ -42,7 +44,8 @@
 
       li {
         margin: 0 25px;
-        .contacto-a{
+
+        .contacto-a {
           background-color: #6793B7;
           color: rgb(255, 255, 255);
           padding: 8px;
@@ -52,6 +55,7 @@
             width: 0;
           }
         }
+
         a {
           font-size: 18px;
           position: relative;
@@ -78,7 +82,16 @@
         }
       }
     }
+    @media(max-width:945px) {
+      ul{
+        li{
+          a{
 
+            font-size: 15px;
+          }
+        }
+      }
+    }
     @media(max-width:850px) {
       ul {
         height: 0;
@@ -94,14 +107,18 @@
         z-index: 2;
         align-items: center;
         transition: 0.5s;
+        li{
+          a{
+            font-size: 18px;
+          }
+        }
       }
     }
   }
 
   .nav-abierto {
     ul {
-      height: 200px;
-
+      height: 230px;
     }
   }
 }
@@ -128,7 +145,7 @@
   background-image: url('../public/images/fondo.png');
   padding-bottom: 100px;
   background-repeat: no-repeat;
-  background-attachment:local;
+  background-attachment: local;
   background-position: -400px 90px;
 }
 
@@ -172,7 +189,8 @@
   text-align: center;
   font-size: 28px;
 
-  h2,h5 {
+  h2,
+  h5 {
     font-size: 16px;
     letter-spacing: 6px;
     margin: 30px 0;
@@ -180,11 +198,15 @@
     font-family: 'Quicksand', sans-serif;
     margin: 30px 0;
   }
+
   @media(max-width:1280px) {
-    h2,h5{
+
+    h2,
+    h5 {
       font-weight: 500;
     }
   }
+
   .contacto-perso {
     margin-top: 40px;
     z-index: 0;
@@ -236,44 +258,48 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   .formacion-psiquiatria {
     font-size: 22px;
+
     h2 {
-      font-family: 'League Spartan',sans-serif;
+      font-family: 'League Spartan', sans-serif;
       color: #6793B7;
       font-size: 40px;
       letter-spacing: -2px;
       font-weight: 800;
     }
-    ul{
-      width: 100%;
+
+    ul {
+      width: 95%;
       max-width: 455px;
-      li{
-        font-family: 'Quicksand',sans-serif;
-        list-style:inside;
-        list-style-position: outside;
+      margin: 0 auto;
+      text-align: left;
+      li {
+        font-family: 'Quicksand', sans-serif;
+        list-style: inside;
       }
     }
-    margin-bottom: 50px;
+    @media(min-width:932px){
+      margin-bottom: 50px;
+    }
   }
 
   .formacion-medica {
     h4 {
-        font-family: 'League Spartan',sans-serif;
-        color: #6793B7;
-        font-size: 40px;
-        letter-spacing: -2px;
-        font-weight: 800;
+      font-family: 'League Spartan', sans-serif;
+      color: #6793B7;
+      font-size: 40px;
+      letter-spacing: -2px;
+      font-weight: 800;
     }
 
     ul {
 
       li {
-        font-family: 'Quicksand',sans-serif;
+        font-family: 'Quicksand', sans-serif;
         font-size: 22px;
         margin-bottom: 15px;
-        list-style:inside;
+        list-style: inside;
       }
     }
   }
@@ -355,29 +381,39 @@
   text-align: center;
   color: #6793B7;
   font-weight: 600;
-  margin: 30px auto;
+  margin: 70px auto;
   max-height: 40px;
   cursor: pointer;
   padding-left: 5px;
   overflow-y: hidden;
   transition: max-height 0.3s;
+  @media(max-width:932px){
+    margin:30px auto;
+  }
 }
+
 .cursos-abiertos {
   max-height: 2500px;
 }
-
+.formaciones-especificas-color{
+  display: flex;
+  align-items: center;
+}
 .formaciones-especificas {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 800px;
+
   .cursos {
     width: 300px;
+
     div {
       ul {
         li {
           color: black;
-          list-style:inside;
+          list-style: inside;
           margin: 10px 0 0 0;
         }
       }
@@ -385,28 +421,30 @@
   }
 }
 
-.tratamientos-especificos-color{
+.tratamientos-especificos-color {
   background-color: #DDF0FF;
   padding-top: 30px;
   padding-bottom: 20px;
   background-image: url('../public/images/fondo.png');
   background-repeat: no-repeat;
-  background-attachment:local;
+  background-attachment: local;
   background-position: -500px -100px;
 
-  h2{
-      font-size: 60px;
-      color: #6793B7;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 50px;
-      font-family: 'League Spartan',sans-serif;
-      letter-spacing: -2px;
-      @media(max-width:430px){
-        font-size: 50px;
-      }
+  h2 {
+    font-size: 60px;
+    color: #6793B7;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: -2px;
+
+    @media(max-width:430px) {
+      font-size: 50px;
+    }
   }
 }
+
 .tratamientos-especificos {
   display: flex;
   flex-wrap: wrap;
@@ -414,11 +452,46 @@
   max-width: 800px;
 
 }
-.reversa{
+.grid-servicio{
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  .imagen_servicio{
+    margin: 0 auto;
+    img{
+
+      max-width: 425px;
+      width: 100%;
+    }
+  }
+}
+.servicio-especifico{
+  align-items: center;
+}
+@media(max-width:730px){
+  .coaching{
+    margin-top: 20px;
+  }
+}
+.reversa {
   background-image: url('../public/images/fondo-reversa.png');
   background-repeat: no-repeat;
-  background-attachment:local;
+  background-attachment: local;
   background-position: 1100px -50px;
+
+  @media(max-width:1300px) {
+    background-position: 600px -50px;
+  }
+
+  @media(max-width:1000px) {
+    background-position: 300px -50px;
+  }
+
+  @media(max-width:650px) {
+    background-position: -200px -50px;
+
+  }
 }
 
 .tratamientos-especificos .tratamiento {
@@ -433,7 +506,7 @@
   ul {
     li {
       color: black;
-      list-style:inside;
+      list-style: inside;
       margin: 10px 0 0 0;
     }
   }
@@ -453,25 +526,26 @@
   padding: 10px 0 50px 0;
   background-image: url('../public/images/fondo.png');
   background-repeat: no-repeat;
-  background-attachment:local;
+  background-attachment: local;
   background-position: -460px -100px;
   background-color: #DDF0FF;
   width: 100%;
   flex-direction: column;
-  h2{
+
+  h2 {
     text-align: center;
     font-size: 60px;
     color: #6793B7;
     letter-spacing: -3px;
     margin: 30px 0;
-    font-family: 'League Spartan',sans-serif;
+    font-family: 'League Spartan', sans-serif;
     font-weight: 800;
   }
 }
 
 .contacto-whatsapp div {
   display: flex;
-  background-color:#6793B7;
+  background-color: #6793B7;
   border-radius: 70px;
   position: relative;
   justify-content: center;
@@ -509,50 +583,84 @@
     height: 400px;
   }
 }
-.linkedin{
+
+.linkedin {
   margin-top: 20px;
 }
-.formaciones-grid{
+
+.formaciones-grid {
   padding-top: 100px;
-  background-position: 900px -50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-position: 1100px -10px;
+
+  @media(max-width:1300px) {
+    background-position: 600px -10px;
+  }
+
+  @media(max-width:1000px) {
+    background-position: 300px -10px;
+  }
+  @media(max-width:650px) {
+    background-position: -200px -10px;
+  }
+  @media(max-width:932px){
+    grid-template-columns: 1fr;
+  }
   background-repeat: no-repeat;
   background-color: #DDF0FF;
-  display: grid;
   background-image: url('../public/images/fondo-reversa.png');
-  grid-template-columns: 1fr
 }
 
-.mapa{
+.mapa {
   width: 100%;
   color: #6793B7;
   background-color: #DDF0FF;
   background-image: url('../public/images/fondo-reversa.png');
   background-position: 900px -50px;
+  background-position: 1100px -10px;
+
+  @media(max-width:1300px) {
+    background-position: 600px -10px;
+  }
+
+  @media(max-width:1000px) {
+    background-position: 300px -10px;
+  }
+
+  @media(max-width:650px) {
+    background-position: -200px -10px;
+  }
+
   background-repeat: no-repeat;
   padding: 10px;
   margin: 0 auto;
-  p{
+
+  p {
     color: black;
     font-weight: bold;
     margin-bottom: 30px;
   }
-  h2{
+
+  h2 {
     font-size: 45px;
     font-weight: 900;
     letter-spacing: -3px;
-    font-family: 'League Spartan',sans-serif;
+    font-family: 'League Spartan', sans-serif;
   }
-  iframe{
+
+  iframe {
     border: 5px solid white;
     border-radius: 10px;
   }
 }
 
-.footer{
+.footer {
   text-align: center;
   color: #6793B7;
   padding: 10px;
-  h2{
+
+  h2 {
     position: relative;
     padding-bottom: 4px;
     text-decoration: underline;

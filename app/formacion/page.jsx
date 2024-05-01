@@ -40,6 +40,9 @@ const Page = () => {
             <li>
               <Link href="/contacto">Contacto</Link>
             </li>
+            <li>
+              <Link href="/ubicacion">Ubicación</Link>
+            </li>
           </ul>
         </nav>
         <FontAwesomeIcon icon={abierto ? faX : faBars} className={abierto ? 'xBars fa-2x' : 'bars fa-2x'} onClick={() => {
@@ -57,7 +60,7 @@ const Page = () => {
                   <li className="mb-5 mt-5"> Especialización en Psiquiatría. (U.C.A).</li>
                   <li className="mb-5 mt-5"> Curso Superior de Posgrado en la Construcción del Diagnostico en Salud Mental. (A.N.A).</li>
                   <li className="mb-5 mt-5"> Curso Superior de Posgrado en Psico-Neurofarmacología. (A.N.A).</li>
-                  <li className="mb-5 mt-5"> Curso Superior de Posgrado en Terapia Cognitivo Conductual en Adultos. (A.N.A).</li>
+                  <li className="mt-5"> Curso Superior de Posgrado en Terapia Cognitivo Conductual en Adultos. (A.N.A).</li>
                 </ul>
               </div>
             </article>

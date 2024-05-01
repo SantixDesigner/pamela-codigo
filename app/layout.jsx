@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="./images/Pamela.jpg" type="image/x-icon" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${raleway.className}`}>{children}</body>
     </html>
   );

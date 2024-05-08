@@ -43,7 +43,7 @@
       justify-content: center;
 
       li {
-        margin: 0 25px;
+        margin: 0 15px;
 
         .contacto-a {
           background-color: #6793B7;
@@ -57,7 +57,7 @@
         }
 
         a {
-          font-size: 18px;
+          font-size: 16px;
           position: relative;
           text-decoration: none;
           color: #6793B7;
@@ -82,16 +82,17 @@
         }
       }
     }
-    @media(max-width:945px) {
-      ul{
-        li{
-          a{
 
-            font-size: 15px;
+    @media(max-width:945px) {
+      ul {
+        li {
+          a {
+            font-size: 14px;
           }
         }
       }
     }
+
     @media(max-width:850px) {
       ul {
         height: 0;
@@ -107,8 +108,9 @@
         z-index: 2;
         align-items: center;
         transition: 0.5s;
-        li{
-          a{
+
+        li {
+          a {
             font-size: 18px;
           }
         }
@@ -258,6 +260,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
   .formacion-psiquiatria {
     font-size: 22px;
 
@@ -271,15 +274,17 @@
 
     ul {
       width: 95%;
-      max-width: 455px;
+      max-width: 1000px;
       margin: 0 auto;
       text-align: left;
+
       li {
         font-family: 'Quicksand', sans-serif;
         list-style: inside;
       }
     }
-    @media(min-width:932px){
+
+    @media(min-width:932px) {
       margin-bottom: 50px;
     }
   }
@@ -387,18 +392,21 @@
   padding-left: 5px;
   overflow-y: hidden;
   transition: max-height 0.3s;
-  @media(max-width:932px){
-    margin:30px auto;
+
+  @media(max-width:932px) {
+    margin: 30px auto;
   }
 }
 
 .cursos-abiertos {
   max-height: 2500px;
 }
-.formaciones-especificas-color{
+
+.formaciones-especificas-color {
   display: flex;
   align-items: center;
 }
+
 .formaciones-especificas {
   display: flex;
   flex-direction: column;
@@ -452,28 +460,34 @@
   max-width: 800px;
 
 }
-.grid-servicio{
+
+.grid-servicio {
   display: flex;
   max-width: 1000px;
   flex-wrap: wrap;
   margin: 0 auto;
-  .imagen_servicio{
-    margin: 0 auto;
-    img{
 
-      max-width: 425px;
+  .imagen_servicio {
+    margin: 0 auto;
+
+    img {
+
+      max-width: 400px;
       width: 100%;
     }
   }
 }
-.servicio-especifico{
+
+.servicio-especifico {
   align-items: center;
 }
-@media(max-width:730px){
-  .coaching{
+
+@media(max-width:730px) {
+  .coaching {
     margin-top: 20px;
   }
 }
+
 .reversa {
   background-image: url('../public/images/fondo-reversa.png');
   background-repeat: no-repeat;
@@ -591,22 +605,36 @@
 .formaciones-grid {
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'holis cursos cursos cursos psiquiatria';
   background-position: 1100px -10px;
 
   @media(max-width:1300px) {
     background-position: 600px -10px;
+    .forma-cursos{
+      article{
+        div{
+          h2{
+            font-size: 30px;
+          }
+          ul{
+            font-size: 19px;
+          }
+        }
+      }
+    }
   }
 
   @media(max-width:1000px) {
     background-position: 300px -10px;
   }
+
   @media(max-width:650px) {
     background-position: -200px -10px;
   }
-  @media(max-width:932px){
-    grid-template-columns: 1fr;
+  @media(max-width:930px){
+    grid-template-areas: 'cursos' 'holis' 'psiquiatria';
   }
+
   background-repeat: no-repeat;
   background-color: #DDF0FF;
   background-image: url('../public/images/fondo-reversa.png');
@@ -667,4 +695,17 @@
     color: #6793B7;
     font-weight: 600;
   }
+}
+
+.forma-cursos {
+  grid-area: cursos;
+}
+
+.forma-host {
+  max-height: 400px;
+  grid-area: holis;
+}
+
+.forma-psi {
+  grid-area: psiquiatria;
 }

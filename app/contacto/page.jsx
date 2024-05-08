@@ -32,6 +32,9 @@ const Page = () => {
                             <Link href="/servicio" >Servicios</Link>
                         </li>
                         <li>
+                            <Link href='/experiencia'>Experiencia Laboral</Link>
+                        </li>
+                        <li>
                             <Link href="/contacto" className="contacto-a" >Contacto</Link>
                         </li>
                         <li>
@@ -48,13 +51,13 @@ const Page = () => {
                     <h2>Contacto</h2>
                     <section className="contacto-whatsapp">
                         <div>
-                            <a href="https://api.whatsapp.com/send/?phone=5491159976440&text=Dra.+Pamela+Gini%0AEstimado+paciente.+Cu%C3%A1l+es+su+consulta%3F&type=phone_number&app_absent=0">¡Hablame por WhatsApp!
+                            <a href="https://api.whatsapp.com/send/?phone=5491159976440&text=Hola.+Quisiera+mas+información+sobre...&type=phone_number&app_absent=0">¡Hablame por WhatsApp!
                                 <FontAwesomeIcon icon={faWhatsapp} size="2x" /></a>
                         </div>
                     </section>
                     <section className="contacto-whatsapp linkedin">
                         <div>
-                            <a href="">¡Buscame en LinkedIn!
+                            <a href="https://www.linkedin.com/in/dra-pamela-romina-gini-5b9971306/">¡Buscame en LinkedIn!
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" /></a>
                         </div>
                     </section>

@@ -38,6 +38,9 @@ const Page = () => {
               <Link href="/servicio" >Servicios</Link>
             </li>
             <li>
+              <Link href='/experiencia'>Experiencia Laboral</Link>
+            </li>
+            <li>
               <Link href="/contacto">Contacto</Link>
             </li>
             <li>
@@ -51,7 +54,7 @@ const Page = () => {
       </header>
       <main className="main" style={{ overflowX: "hidden" }}>
         <div className="formaciones-grid" id="formacion-academica">
-          <section>
+          <section className="forma-cursos">
             <article className="formacion-academica" >
               <div className="formacion-psiquiatria">
                 <h2>Formación Académica:</h2>
@@ -65,7 +68,7 @@ const Page = () => {
               </div>
             </article>
           </section>
-          <section className="formaciones-especificas-color">
+          <section className="formaciones-especificas-color forma-psi">
             <section className="formaciones-especificas">
               <div className={aberturaDePsiquiatriaCursos ? 'cursos cursos-psiquiatria cursos-abiertos izquierda' : 'cursos cursos-psiquiatria izquierda'}>
                 <div onClick={() => setAberturaPsiquiatriaCursos(!aberturaDePsiquiatriaCursos)}>
@@ -101,9 +104,12 @@ const Page = () => {
                     <li>El Rol de la Enfermería Durante la Pandemia COVID-19. (IntraMed).</li>
                     <li>Uso Racional de Psicofármacos en Pandemia. (IntraMed).</li>
                   </ul>
-
                 </div>
               </div>
+            </section>
+          </section>
+          <section className="formaciones-especificas-color forma-host">
+            <section className="formaciones-especificas">
               <div className="cursos cursos-holisteria holisteria izquierda" style={{ maxHeight: aberturaDeHolisticaCursos ? '300px' : '40px' }}>
                 <div onClick={() => setAberturaHolisticaCursos(!aberturaDeHolisticaCursos)}>
                   <h4>Formación Holística <SlArrowUp className={aberturaDeHolisticaCursos ? 'first-man' : 'first-man check'} /></h4>
@@ -112,7 +118,6 @@ const Page = () => {
                     <li>Practitioner en Programación Neurolingüística (Society of P.N.L).</li>
                     <li>Mindfulness en Tiempos de Estrés. (U.C.A).</li>
                     <li>Curso de Biodescodificación (Capacitarte).</li>
-
                   </ul>
                 </div>
               </div>

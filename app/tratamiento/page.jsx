@@ -39,6 +39,9 @@ const Page = () => {
                             <Link href="/servicio" >Servicios</Link>
                         </li>
                         <li>
+                            <Link href='/experiencia'>Experiencia Laboral</Link>
+                        </li>
+                        <li>
                             <Link href="/contacto" >Contacto</Link>
                         </li>
                         <li>
@@ -57,45 +60,37 @@ const Page = () => {
                         <div className="cursos tratamiento tratamiento-psiquiatria derecha" style={{ maxHeight: aberturaDeTratamientoPsiquiatrico ? '1600px' : '45px' }} onClick={() => setAberturaDeTratamientoPsiquiatrico(!aberturaDeTratamientoPsiquiatrico)}>
                             <h4>Psiquiatría y Psicoterapia <SlArrowUp className={aberturaDeTratamientoPsiquiatrico ? 'first-man' : 'first-man check'} /></h4>
                             <ul>
-                                <li>Demencias.</li>
-                                <li>Trastornos amnésicos.</li>
-                                <li>Trastornos cognoscitivos.</li>
-                                <li>Trastornos Somatomorfos.</li>
-                                <li>Trastornos Facticios.</li>
-                                <li>Esquizofrenia.</li>
-                                <li>Trastornos Psicóticos.</li>
-                                <li>Trastornos Disociativos.</li>
-                                <li>Trastornos Inducidos por Medicamentos.</li>
-                                <li>Trastornos mentales debidos a enfermedades médicas.</li>
-                                <li>Trastornos Adaptativos.</li>
-                                <li>Trastornos del sueño.</li>
-                                <li>Trastornos del Espectro del Estado del Ánimo.</li>
-                                <li>Trastornos del Espectro de la Ansiedad.</li>
-                                <li>Trastornos de Personalidad.</li>
-                                <li>Trastornos de la Comunicación.</li>
-                                <li>Trastornos del Aprendizaje.</li>
-                                <li>Trastornos Generalizados del desarrollo.</li>
-                                <li>Retrasos Madurativos.</li>
-                                <li>Trastornos por Déficit de Atención.</li>
-                                <li>Trastornos del Control de los Esfínteres.</li>
-                                <li>Trastorno de las Habilidades Motoras.</li>
-                                <li>Trastornos de Tics.</li>
+                                <li>Trastorno del Espectro del Estado del Ánimo.</li>
+                                <li>Trastorno del Espectro de la Ansiedad.</li>
+                                <li>Trastorno del sueño.</li>
+                                <li>Trastorno de Personalidad.</li>
                                 <li>Trastorno de la Conducta Alimentaria.</li>
-                                <li>Trastornos Sexuales.</li>
-                                <li>Trastornos de la Identidad sexual.</li>
+                                <li>Trastorno Somatomorfo.</li>
                                 <li>Trastorno del Control de los Impulsos.</li>
                                 <li>Trastorno por Consumo de Sustancias.</li>
-                                <li>Delirium.</li>
-                                <li>Demencias.</li>
-                                <li>Trastornos amnésicos.</li>
-                                <li>Trastornos cognoscitivos.</li>
-                                <li>Trastornos Somatomorfos.</li>
-                                <li>Trastornos Facticios.</li>
                                 <li>Esquizofrenia.</li>
-                                <li>Trastornos Psicóticos.</li>
-                                <li>Trastornos Disociativos.</li>
+                                <li>Trastorno Psicótico.</li>
+                                <li>Trastorno Disociativo.</li>
+                                <li>Trastorno Facticio.</li>
+                                <li>Duelo.</li>
+                                <li>Abuso.</li>
+                                <li>Negligencia.</li>
+                                <li>Trastorno Inducidos por Medicamento.</li>
+                                <li>Trastorno Mentales debido a enfermedad médica.</li>
+                                <li>Trastorno Adaptativo.</li>
+                                <li>Trastorno Sexual.</li>
+                                <li>Delirium.</li>
+                                <li>Demencia.</li>
+                                <li>Trastorno amnésico.</li>
+                                <li>Deterioro cognoscitivo.</li>
+                                <li>Trastorno de la Comunicación.</li>
+                                <li>Trastorno del Aprendizaje.</li>
+                                <li>Retraso Madurativo.</li>
+                                <li>Trastorno por Déficit de Atención.</li>
+                                <li>Trastorno de las Habilidades Motoras.</li>
+                                <li>Trastornos de Tics.</li>
                                 <li>Problema del Ciclo Vital.</li>
-                                <li>Problema de Relación.</li>
+                                <li>Problemas de Relación.</li>
                                 <li>Problema de Identidad.</li>
                                 <li>Problema Religioso.</li>
                                 <li>Problema Espiritual.</li>
@@ -103,9 +98,6 @@ const Page = () => {
                                 <li>Problema Laboral.</li>
                                 <li>Problema de Aculturación.</li>
                                 <li>Problema Biográfico.</li>
-                                <li>Duelo.</li>
-                                <li>Abuso.</li>
-                                <li>Negligencia.</li>
                                 <li>Incumplimiento Terapéutico.</li>
                             </ul>
                         </div>

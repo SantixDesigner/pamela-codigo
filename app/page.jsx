@@ -43,6 +43,9 @@ export default function Home() {
               <Link href="/servicio" >Servicios</Link>
             </li>
             <li>
+              <Link href='/experiencia'>Experiencia Laboral</Link>
+            </li>
+            <li>
               <Link href="/contacto" >Contacto</Link>
             </li>
             <li>
